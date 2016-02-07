@@ -24,7 +24,7 @@ module CacheLT =
 
 
     
-    let cache<'key, 'value> (get: 'key -> 'value option) (set: 'key -> 'value -> unit) (generator: 'key -> 'value) (key: 'key) = 
+    let cache (get: 'key -> 'value option) (set: 'key -> 'value -> unit) (generator: 'key -> 'value) (key: 'key) = 
         match get(key) with 
             | Some(x) -> x 
             | None -> 
@@ -33,7 +33,7 @@ module CacheLT =
                 value         
 
 
-    let getOrAdd<'key, 'value> generator = 
+    let getOrAdd generator = 
         let repoAccess = getConcurrentDictAccess<'key, 'value>()
         cache repoAccess.get repoAccess.set generator 
 

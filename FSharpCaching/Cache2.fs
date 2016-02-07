@@ -5,5 +5,5 @@
 module Cache2 = 
 
     let get create =
-      let cache = System.Collections.Concurrent.ConcurrentDictionary<'a, 'b>()
+      let cache = System.Collections.Concurrent.ConcurrentDictionary<'key, 'value>()
       fun id -> cache.GetOrAdd(id, System.Func<_, _>(create))

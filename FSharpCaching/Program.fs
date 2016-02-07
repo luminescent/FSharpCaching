@@ -7,7 +7,7 @@ open Cache2
 module Main = 
 
 
-    let getOrAddAndPrint<'key, 'value> (getOrAddFunc : ('key -> 'value) -> ('key -> 'value)) generator (keys: 'key list) =
+    let getOrAddAndPrint (getOrAddFunc : ('key -> 'value) -> ('key -> 'value)) generator (keys: 'key list) =
 
         let myGetOrAdd = getOrAddFunc generator
 

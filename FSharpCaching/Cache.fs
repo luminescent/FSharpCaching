@@ -9,7 +9,7 @@ module Cache =
         abstract member Set: 'key -> 'value -> unit
 
 
-    let cache2<'key, 'value> (store: ICacheStore<'key, 'value>) (generator : 'key -> 'value) (key: 'key) = 
+    let cache2 (store: ICacheStore<'key, 'value>) (generator : 'key -> 'value) (key: 'key) = 
         match store.Get key with 
             | Some(x) ->  x
             | None -> 
@@ -28,7 +28,7 @@ module Cache =
                 store.[key] <- value 
 
 
-    let getOrAdd2<'key, 'value> generator =
+    let getOrAdd2 generator =
         let store = new ConcurrentDictonaryStore<'key, 'value>() :> ICacheStore<'key, 'value>
         cache2 store generator 
 
