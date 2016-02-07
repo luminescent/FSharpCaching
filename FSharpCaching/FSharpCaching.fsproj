@@ -50,6 +50,7 @@
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Cache.fs" />
     <Compile Include="CacheLT.fs" />
+    <Compile Include="Cache2.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
   </ItemGroup>

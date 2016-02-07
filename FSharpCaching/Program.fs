@@ -2,6 +2,7 @@
 
 open CacheLT
 open Cache
+open Cache2
 
 module Main = 
 
@@ -28,6 +29,9 @@ module Main =
 
         getOrAddAndPrint getOrAdd generator [0..10]
         getOrAddAndPrint getOrAdd2 generator [0..10]
+
+
+        getOrAddAndPrint get generator [0..10]
 
 
 
