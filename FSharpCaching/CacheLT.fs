@@ -12,7 +12,8 @@ module CacheLT =
         let store = new ConcurrentDictionary<'key, 'value>()
 
         let storeSet = fun key value -> 
-            store.TryAdd(key, value) |> ignore 
+            store.TryAdd(key, value) 
+            |> ignore 
 
         let storeGet = fun key ->
             match store.ContainsKey(key) with 

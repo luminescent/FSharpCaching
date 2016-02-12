@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="CompExprCache.fs" />
     <Compile Include="Cache.fs" />
     <Compile Include="CacheLT.fs" />
     <Compile Include="Cache2.fs" />
